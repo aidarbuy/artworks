@@ -1,0 +1,11 @@
+<p class="text-info">{{ artwork.mediumObject.name }}</p>
+<!-- <select ng-model="artworkCtrl.medium" class="form-control">
+  <option value="Painting">
+    {{ artwork.mediumObject.name }}
+  </option>
+  <option value="Sculpture">Sculpture</option>
+</select> -->
+
+<div ng-repeat='material in artwork.materialsArray'>
+  {{ material.name }}
+</div>

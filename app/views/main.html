@@ -1,0 +1,37 @@
+<p><input type="search" class='form-control' placeholder="Search" ng-model='query' /></p>
+
+<table class="table table-bordered">
+	<thead>
+		<tr class="success">
+			<th>Artist & Title & Date</th>
+			<th>Medium & Material</th>
+			<th>Dimensions & Color</th>
+			<th>Price</th>
+			<th>Misc</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<input type="text" ng-model="newArtwork.artist" placeholder="Artist name" />
+				<input type="text" ng-model="newArtwork.title" placeholder="Artwork title"  />
+				<input type="number" ng-model="newArtwork.year" placeholder="Year"  />
+			</td>
+			<td>
+			</td>
+			<td>
+			</td>
+			<td>
+				<button ng-click="saveArtwork()">Submit</button>
+			</td>
+		</tr>
+		</tr>
+		<tr ng-repeat="artwork in artworks | filter: query">
+			<td artist></td>
+			<td medium></td>
+			<td dimensions></td>
+			<td price></td>
+			<td class="btn btn-default" ng-click="deleteArtwork(artwork)">Delete</td>
+		</tr>
+	</tbody>
+</table>
